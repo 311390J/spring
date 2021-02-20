@@ -1,0 +1,16 @@
+package com.example.demo;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class Hello4Controller {
+	@PostMapping("/hello4")
+	public String sayHello(@RequestParam("name") String name) {
+		return "Hello, World" + "こんにちは" + name + "さん";
+	}
+}
+
+//@PostMappingや、@GetMappingで指定された、
+//URLﾊﾟｽ名に対応する処理　「メソッド」をハンドラーメソッドという。
